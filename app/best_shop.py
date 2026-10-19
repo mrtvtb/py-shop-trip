@@ -37,12 +37,12 @@ def locate_and_buy_in_the_best_shop(
                 else:
                     print(f"{qty} {prod}s for {price} dollars")
                 total_shop_cost.append(price)
-            print(f"Total cost is {sum(total_shop_cost)} dollars")
+            print(f"Total cost is {round(sum(total_shop_cost), 2)} dollars")
             print("See you again!\n")
             customer.location = home_location
             print(f"{customer.name} rides home")
-            customer.money -= best_cost
-            print(f"{customer.name} now has {customer.money} dollars\n")
+            print(f"{customer.name} now has "
+                  f"{round(customer.money - best_cost, 2)} dollars\n")
         else:
             print(f"{customer.name} doesn't have "
                   "enough money to make a purchase in any shop")
